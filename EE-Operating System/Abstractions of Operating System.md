@@ -4,7 +4,7 @@ processes, virtual memory, files and virtual machine
 
 ------
 
-##Processes: abstractions for the processor, main memory, and I/O devices.
+## Processes: abstractions for the processor, main memory, and I/O devices.
 
 A process is the operating system's abstraction for a running program.
 
