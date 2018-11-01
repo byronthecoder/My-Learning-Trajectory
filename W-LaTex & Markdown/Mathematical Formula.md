@@ -80,6 +80,22 @@ $$
 
 
 
+$$
+sign(x)=\begin {cases}
++1, & x\geq0 \\\
+-1, & x<0
+\end {cases}
+$$
+
+### Code Block
+
+``` c++
+int main(){
+  printf(“hello world!\n”);
+  return 0;
+}
+```
+
 ### Superscript and Subscript
 
 - `^` to superscript 
@@ -106,9 +122,22 @@ $$
 
 - use `\overbrace{ }^{ }` to  $\overbrace{a + b + c}^{3}$
 
+- $\vec{a}$
+
 ### Brackets
 
 - `( )`, `[ ]`, and `|` represent themselves, but `{ }` need be represent by `\lbrace \rbrace` sometime.
+
+- | Bracks | Code      |
+  | ------ | --------- |
+  | {      | `\lbrace` |
+  | }      | `\rbrace` |
+  | ⟨      | `\langle` |
+  | ⟩      | `\rangle` |
+  | ⌈      | `\lceil`  |
+  | ⌉      | `\rceil`  |
+  | ⌊      | `\lfloor` |
+  | ⌋      | `\rfloor` |
 
 ### Fraction
 
