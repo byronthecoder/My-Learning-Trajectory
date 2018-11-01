@@ -1,4 +1,4 @@
-# A First Course in Probability
+# The Summary of A First Course in Probability ()
 ## 1. Axioms of Probability
 __Definition 1.1__
 
@@ -43,7 +43,7 @@ $$
 
 ​	___Axiom 1___
 $$
-0 <= P(E) <= 1
+0 \leq P(E) \leq 1
 $$
 ​	___Axiom 2___
 $$
@@ -105,7 +105,7 @@ __Definition 2.2__
 $$
 \cfrac{P(A)}{P(A^c)} = \cfrac{P(A)}{1\ -\ P(A)}
 $$
-This tells how much more likely it is that the event $A$ occurs than it is that does not occur. If the odds are equal to $\alpha$, then it is common to say that the odds are "$\alpha$ to 1" in favor of the hypothesis.
+​	This tells how much more likely it is that the event $A$ occurs than it is that does not occur. If the odds are equal to $\alpha$, then it is common to say that the odds are "$\alpha$ to 1" in favor of the hypothesis.
 
 ​	The new odds after the evidence $E$ are
 $$
@@ -143,7 +143,112 @@ $$
 __Proposition 2.3__
 
 ​	Conditional probabilities satisfy all of the properties of ordinary probabilities.
+
+​	(a)	$0 \leq P(E|F) \leq 1$
+
+​	(b)	$P(S|F) = 1$
+
+​	(c)	If $ E_i,\  i=1, 2, ...$, are mutually exclusive events, then
 $$
-0 <= P(E|F) <=1
+P(\bigcup_1^\infty E_i|F) = \sum_1^\infty P(E_i|F)
 $$
-​	
+## 3. Random Variables
+
+__Definition 3.1__
+
+​	For a discrete random variable $X$, we define the ___probability mass function___ $p(a)$ of $X$ by
+$$
+p(a) = P(X=a)
+$$
+$X$ must take on one of the value $x_i$ for $i=1, 2, ...$, and we have
+$$
+\begin{eqnarray}
+&p&(x_i) \geq 0 \quad \quad \ \ \ for \ i=1, 2, ...\\
+&p&(x)=0 \qquad \quad for \ all \ other \ values \ of \ x \\
+&\sum_{i=1}^\infty& p(x_i) = 1
+\end{eqnarray}
+$$
+__Definition 3.2__
+
+​	If $X$ is a discrete random variable having a probability mass function $p(x)$, then the ___expectation___, or the ___expected value___, of $X$, denoted by $E[X]$, is defined by
+$$
+E[X] = \sum_{x:p(x)>0}xp(x)
+$$
+$E[X]$ is also referred to as the ___mean___ or  ___the first moment___ of $X$. The quantity $E[Xn], n \geq 1$, is called  ___the nth moment ___ of X.
+
+__Definition 3.3__
+
+​	We say that $I$ is an ___indicator variable___ for the event $A$ if
+$$
+I=\begin {cases}
+1, & if\ A\ occurs \\
+0, & if\ A^c\ occurs
+\end {cases}
+$$
+, and we have $E[I] = P(A)$
+
+__Proposition 3.1__
+
+​	If $X$ is a discrete random variable that takes on one of the values $x_i, i \geq 1$, with respective probabilities $p(x_i)$, then, for any real-valued function $g$,
+$$
+E[g(X)]=\sum_i g(x_i)p(x_i)
+$$
+__Corollary 3.1__
+
+​	 If $a$ and $b$ are constants, then
+$$
+E[aX + b] = aE[X] + b
+$$
+__Definition 3.4__
+
+​	If $X$ is a random variable with mean $\mu$, then the variance of $X$, denoted by $Var(X)$,
+is defined by	
+$$
+Var(X) = E[(X − \mu)^2]
+$$
+An alternative formula for $Var(X)$ is derived as follows:
+$$
+Var(X) = E[X^2] − (E[X])^2
+$$
+__Corollary 3.2__
+
+​	for any constants $a$ and $b$
+$$
+Var(aX + b) = a^2Var(X)
+$$
+__Definition 3.5__
+
+​	The square root of the $Var(X)$ is called the ___standard deviation___ of $X$, and we denote it by $SD(X)$. That is, 
+$$
+SD(X) = \sqrt{Var(X)}
+$$
+__Remarks__
+
+​	Analogous to the ___means___ being the center of gravity of a distribution of mass, the ___variance___ represents, in the terminology of mechanics, the moment of inertia.
+
+__Definition 3.6__
+
+​	Suppose now that $n$ independent trials, each of which results in a ___success___ with probability $p$ and in a ___failure___ with probability $1 − p$, are to be performed. If $X$ represents the number of successes that occur in the $n$ trials, then $X$ is said to be a  ___binomial random variable___ with parameters $(n, p)$, and its probability mass function is given by
+$$
+p(i) = \left(\begin{matrix} n\\i \end{matrix} \right)
+p^i(1\ -\ p)^{n-i} \qquad i=0, 1, ..., n
+$$
+
+
+__Definition 3.7__
+
+​	A random variable $X$ is said to be a ___Bernoulli random variable___ if its probability mass function is given by following equations for some $p \in (0, 1)$
+$$
+\begin{eqnarray}
+&p(0)& = P{X = 0} = 1 − p \\
+&p(1)& = P{X = 1} = p
+\end{eqnarray}
+$$
+​	A Bernoulli random variable is just a binomial random variable with parameters $(1, p)$.	
+
+
+
+
+
+
+
